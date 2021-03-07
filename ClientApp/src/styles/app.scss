@@ -1,0 +1,104 @@
+﻿//colors
+$primary: #E01A76;
+
+$background-color: #f6f6f6;
+$border-color: #808080;
+
+//nav
+$nav-menu-padding: 5vh;
+
+//form
+$form-padding: 2vh;
+
+//pod
+$pod-padding: 1vh;
+
+$grid-gap: 1rem;
+
+
+@mixin responsive-grid($width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, $width);
+    grid-gap: $grid-gap;
+    align-content: center;
+    justify-content: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $background-color;
+}
+
+nav {
+    height: 12vh;
+    padding: $nav-menu-padding;
+    background: $primary;
+}
+
+main {
+    padding: 2vh 0;
+}
+
+progress {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+//form utilities
+
+.form-white-bg {
+    width: 50vw;
+    min-height: 60vh;
+    margin: 10vh auto;
+    background: #fff;
+    padding: $form-padding;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-gap: $grid-gap;
+}
+
+.form-field {
+    @include responsive-grid(minmax(150px, 1fr));
+}
+
+.form-option-label {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    @extend .flex-column-between;
+    align-items: center;
+}
+
+.pod {
+    border: 1px solid $border-color;
+    padding: $pod-padding;
+    img {
+        max-width: 100%;
+    }
+}
+
+.pods-width-150 {
+    @include responsive-grid(150px);
+}
+
+.pods-width-350 {
+    @include responsive-grid(350px);
+}
+
+//flex utilities
+.flex-row-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
