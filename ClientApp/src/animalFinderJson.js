@@ -29,8 +29,8 @@
             "questions": [
                 {
                     "name": "gender",
-                    "label": "What is your preferred gender?",
-                    "type": "radio",
+                    "label": "What gender for your new pet?",
+                    "type": "checkbox",
                     "options": [
                         {
                             "label": "Male",
@@ -44,11 +44,11 @@
                 },
                 {
                     "name": "age",
-                    "label": "What is your preferred age?",
-                    "type": "radio",
+                    "label": "What age for your new pet?",
+                    "type": "checkbox",
                     "options": [
                         {
-                            "label": "0-1yrs (puppy)",
+                            "label": "0-1yrs",
                             "value": "0-1"
                         },
                         {
@@ -60,7 +60,7 @@
                             "value": "3-5"
                         },
                         {
-                            "label": "6+ (older dog)",
+                            "label": "6+yrs",
                             "value": "6+"
                         }
                     ]
@@ -87,6 +87,10 @@
                         {
                             "label": "Children Friendly",
                             "value": "suitable-with-children"
+                        },
+                        {
+                            "label": "First Pet Friendly",
+                            "value": "suitable-first-pet"
                         }
                     ]
                 },

@@ -7,7 +7,7 @@ export default function Animal({data}) {
             <h4>{data.name}</h4>
             <img src={`images/${image}`} alt=""/>
             <p>{data.breed}</p>
-            <a href="/" class="btn btn-primary">View more</a>
+            <a href="/" class="btn main-btn">View more</a>
         </div>
         )
 }
